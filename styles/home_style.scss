@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+$color: #E14A5B;
+body {
+    background-color: white;
+}
+
+nav {
+    padding: 10px 10px 10px 2vw;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 50px;
+    grid-template-columns: 1fr 700px 1fr;
+    .logo-container,
+    .logo-container:hover {
+        place-self: start;
+        text-decoration: none;
+        .logo {
+            padding: 5px 10px;
+            color: $color;
+            font-weight: bold;
+            border: 3px solid $color;
+        }
+    }
+    .navbar-items {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        a,
+        a:hover {
+            color: black;
+            transition: 1s ease-in-out;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+    }
+    button {
+        color: white !important;
+        background-color: black !important;
+        border-radius: 30px !important;
+        padding: 8px 40px !important;
+        box-shadow: 5px 8px 14px 2px rgba(0, 0, 0, 0.25) !important;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "text image" "text image" "text image";
+    img {
+        grid-area: image;
+        height: 90vh;
+    }
+    .main-text {
+        grid-area: text;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        h1 {
+            font-weight: bolder;
+            font-size: 3.5vw;
+            place-self: end center;
+            color: black;
+        }
+        p {
+            font-size: 1vw;
+            color: #9D9D9D;
+            font-family: 'Rhodium Libre', serif;
+            place-self: center;
+        }
+        form {
+            place-self: center start;
+            padding-left: 15%;
+            label {
+                display: block;
+                color: $color;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+            input::placeholder,
+            input:focus {
+                font-family: 'Rhodium Libre', serif;
+                color: $color;
+                outline: none;
+            }
+            input {
+                border-radius: 20px;
+                border: 2px solid #B9B9B9;
+                padding: 3px 10px 0px;
+                font-family: 'Rhodium Libre', serif;
+                color: $color;
+                margin-right: 30px;
+                &[name="rooms"] {
+                    width: 100px;
+                }
+            }
+            button {
+                font-family: 'Rhodium Libre', serif;
+                background-color: $color !important;
+                border-radius: 20px;
+                color: white;
+                padding: 8px 50px;
+            }
+        }
+    }
+}

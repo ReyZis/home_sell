@@ -1,0 +1,166 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: white;
+}
+
+nav {
+  padding: 10px 10px 10px 2vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  -ms-grid-columns: 1fr 700px 1fr;
+      grid-template-columns: 1fr 700px 1fr;
+}
+
+nav .logo-container,
+nav .logo-container:hover {
+  place-self: start;
+  text-decoration: none;
+}
+
+nav .logo-container .logo,
+nav .logo-container:hover .logo {
+  padding: 5px 10px;
+  color: #E14A5B;
+  font-weight: bold;
+  border: 3px solid #E14A5B;
+}
+
+nav .navbar-items {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+nav .navbar-items a,
+nav .navbar-items a:hover {
+  color: black;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+nav button {
+  color: white !important;
+  background-color: black !important;
+  border-radius: 30px !important;
+  padding: 8px 40px !important;
+  -webkit-box-shadow: 5px 8px 14px 2px rgba(0, 0, 0, 0.25) !important;
+          box-shadow: 5px 8px 14px 2px rgba(0, 0, 0, 0.25) !important;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "text image" "text image" "text image";
+}
+
+main img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: image;
+  height: 90vh;
+}
+
+main .main-text {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: text;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+main .main-text h1 {
+  font-weight: bolder;
+  font-size: 3.5vw;
+  place-self: end center;
+  color: black;
+}
+
+main .main-text p {
+  font-size: 1vw;
+  color: #9D9D9D;
+  font-family: 'Rhodium Libre', serif;
+  place-self: center;
+}
+
+main .main-text form {
+  place-self: center start;
+  padding-left: 15%;
+}
+
+main .main-text form label {
+  display: block;
+  color: #E14A5B;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+main .main-text form input::-webkit-input-placeholder,
+main .main-text form input:focus {
+  font-family: 'Rhodium Libre', serif;
+  color: #E14A5B;
+  outline: none;
+}
+
+main .main-text form input:-ms-input-placeholder,
+main .main-text form input:focus {
+  font-family: 'Rhodium Libre', serif;
+  color: #E14A5B;
+  outline: none;
+}
+
+main .main-text form input::-ms-input-placeholder,
+main .main-text form input:focus {
+  font-family: 'Rhodium Libre', serif;
+  color: #E14A5B;
+  outline: none;
+}
+
+main .main-text form input::placeholder,
+main .main-text form input:focus {
+  font-family: 'Rhodium Libre', serif;
+  color: #E14A5B;
+  outline: none;
+}
+
+main .main-text form input {
+  border-radius: 20px;
+  border: 2px solid #B9B9B9;
+  padding: 3px 10px 0px;
+  font-family: 'Rhodium Libre', serif;
+  color: #E14A5B;
+  margin-right: 30px;
+}
+
+main .main-text form input[name="rooms"] {
+  width: 100px;
+}
+
+main .main-text form button {
+  font-family: 'Rhodium Libre', serif;
+  background-color: #E14A5B !important;
+  border-radius: 20px;
+  color: white;
+  padding: 8px 50px;
+}
+/*# sourceMappingURL=home_style.css.map */
