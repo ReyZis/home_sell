@@ -26,15 +26,12 @@ nav .logo-container:hover {
 
 nav .logo-container .logo,
 nav .logo-container:hover .logo {
-  padding: 5px 10px;
   color: #E14A5B;
   font-weight: bold;
   border: 3px solid #E14A5B;
 }
 
 nav .navbar-items {
-  width: 100%;
-  height: 100%;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -42,25 +39,28 @@ nav .navbar-items {
       grid-template-columns: repeat(4, 1fr);
 }
 
-nav .navbar-items a,
-nav .navbar-items a:hover {
+nav .navbar-items a {
   color: black;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
-  text-decoration: none;
   font-weight: bolder;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: ease-in-out 100ms;
+  transition: ease-in-out 100ms;
+}
+
+nav .navbar-items a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #E14A5B;
 }
 
 nav button {
   color: white !important;
   background-color: black !important;
   border-radius: 30px !important;
-  padding: 8px 40px !important;
   -webkit-box-shadow: 5px 8px 14px 2px rgba(0, 0, 0, 0.25) !important;
           box-shadow: 5px 8px 14px 2px rgba(0, 0, 0, 0.25) !important;
 }
 
-main {
+.home main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -70,80 +70,77 @@ main {
       grid-template-areas: "text image" "text image" "text image";
 }
 
-main img {
+.home main img {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   grid-area: image;
-  height: 90vh;
+  height: 44vw;
 }
 
-main .main-text {
+.home main .main-text {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: text;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[3];
       grid-template-rows: repeat(3, 1fr);
 }
 
-main .main-text h1 {
+.home main .main-text h1 {
   font-weight: bolder;
   font-size: 3.5vw;
   place-self: end center;
   color: black;
 }
 
-main .main-text p {
+.home main .main-text p {
   font-size: 1vw;
   color: #9D9D9D;
   font-family: 'Rhodium Libre', serif;
   place-self: center;
 }
 
-main .main-text form {
+.home main .main-text form {
   place-self: center start;
   padding-left: 15%;
 }
 
-main .main-text form label {
+.home main .main-text form label {
   display: block;
   color: #E14A5B;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-main .main-text form input::-webkit-input-placeholder,
-main .main-text form input:focus {
+.home main .main-text form input::-webkit-input-placeholder,
+.home main .main-text form input:focus {
   font-family: 'Rhodium Libre', serif;
   color: #E14A5B;
   outline: none;
 }
 
-main .main-text form input:-ms-input-placeholder,
-main .main-text form input:focus {
+.home main .main-text form input:-ms-input-placeholder,
+.home main .main-text form input:focus {
   font-family: 'Rhodium Libre', serif;
   color: #E14A5B;
   outline: none;
 }
 
-main .main-text form input::-ms-input-placeholder,
-main .main-text form input:focus {
+.home main .main-text form input::-ms-input-placeholder,
+.home main .main-text form input:focus {
   font-family: 'Rhodium Libre', serif;
   color: #E14A5B;
   outline: none;
 }
 
-main .main-text form input::placeholder,
-main .main-text form input:focus {
+.home main .main-text form input::placeholder,
+.home main .main-text form input:focus {
   font-family: 'Rhodium Libre', serif;
   color: #E14A5B;
   outline: none;
 }
 
-main .main-text form input {
+.home main .main-text form input {
   border-radius: 20px;
   border: 2px solid #B9B9B9;
   padding: 3px 10px 0px;
@@ -152,15 +149,146 @@ main .main-text form input {
   margin-right: 30px;
 }
 
-main .main-text form input[name="rooms"] {
+.home main .main-text form input[name="rooms"] {
   width: 100px;
 }
 
-main .main-text form button {
+.home main .main-text form button {
   font-family: 'Rhodium Libre', serif;
   background-color: #E14A5B !important;
   border-radius: 20px;
   color: white;
   padding: 8px 50px;
+}
+
+.what_is_this main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "text image";
+}
+
+.what_is_this main img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: image;
+  height: 44vw;
+}
+
+.what_is_this main .main-text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 9vw;
+  padding-right: 70px;
+}
+
+.what_is_this main .main-text h1 {
+  font-weight: bolder;
+  font-size: 3.5vw;
+  color: black;
+  padding-bottom: 30px;
+}
+
+.what_is_this main .main-text p {
+  text-align: justify;
+  font-size: 1vw;
+  color: #9D9D9D;
+  font-family: 'Rhodium Libre', serif;
+}
+
+.category form .search-container {
+  border: 3px solid #B9B9B9;
+  border-radius: 50px;
+  width: 60%;
+}
+
+.category form .search-container #tags-container .tag {
+  background: #E0E0E0;
+  color: #E14A5B;
+  border-radius: 50px;
+}
+
+.category form .search-container #tags-container .tag span {
+  max-width: 100px;
+}
+
+.category form .search-container input,
+.category form .search-container input:hover {
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.category form .search-container button {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  place-self: center;
+}
+
+.category form .search-container span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0;
+}
+
+.category .images-container {
+  height: 80vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+  grid-gap: 10px;
+}
+
+.category .images-container div {
+  background-size: cover;
+}
+
+.category .images-container .house1 {
+  background-image: url(../media/house1.jpg);
+}
+
+.category .images-container .house2 {
+  background-image: url(../media/house2.jpg);
+}
+
+.category .images-container .house3 {
+  background-image: url(../media/house3.jpg);
+}
+
+.category .images-container .house4 {
+  background-image: url(../media/house4.jpg);
+}
+
+.category .images-container .house5 {
+  background-image: url(../media/house5.jpg);
+}
+
+.category .images-container .house6 {
+  background-image: url(../media/house6.jpg);
 }
 /*# sourceMappingURL=home_style.css.map */

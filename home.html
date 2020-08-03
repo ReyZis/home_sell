@@ -18,41 +18,98 @@
     <!-- my stying -->
     <link rel="stylesheet" href="./styles/home_style.css">
 
+    <!-- font awesome kit-->
+    <script src="https://kit.fontawesome.com/ec12bb7bd0.js" crossorigin="anonymous"></script>
+
     <title>Homer</title>
 </head>
 
 <body>
     <nav>
         <a class="logo-container" href="">
-            <div class="logo">
+            <div class="logo py-1 px-2">
                 Homer
             </div>
         </a>
 
-        <div class="navbar-items">
+        <div class="navbar-items w-100 h-100">
             <a href="">HOME</a>
             <a href="">WHAT IS THIS?</a>
             <a href="">CATEGORY</a>
             <a href="">ABOUT</a>
         </div>
 
-        <button type="button" class="btn btn-raised">sign in</button>
+        <button type="button" class="btn py-2 px-5">sign in</button>
     </nav>
 
-    <main>
-        <img src="./media/home.svg" alt="home vector art">
-        <div class="main-text">
-            <h1>Feel the satisfaction, <br>find our new home now</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Natus consequatur hic amet sapiente obcaecati nostrum consectetur</p>
-            <form>
-                <label> Looking for:</label>
-                <input type="number" name="price" placeholder="Price">
-                <input type="number" name="rooms" placeholder="rooms">
-                <button type="button" class="btn btn-raised btn-primary">Search</button>
-            </form>
+    <div class="home" hidden>
+        <main>
+            <img src="./media/home.svg" alt="home vector art">
+            <div class="main-text">
+                <h1>Feel the satisfaction, <br>find our new home now</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Natus consequatur hic amet sapiente obcaecati nostrum consectetur</p>
+                <form>
+                    <label> Looking for:</label>
+                    <input type="number" name="price" placeholder="Price">
+                    <input type="number" name="rooms" placeholder="rooms">
+                    <button type="button" class="btn btn-raised btn-primary">Search</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <div class="what_is_this" hidden>
+        <main>
+            <img src="./media/question.svg" alt="question vector art">
+            <div class="main-text">
+                <h1>What is this??</h1>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas debitis alias voluptatem dicta veritatis excepturi pariatur! Obcaecati nihil ad autem impedit vitae maiores esse numquam. Qui incidunt consectetur nobis autem! Lorem ipsum dolor
+                    sit, amet consectetur adipisicing elit. Officiis illum natus ea suscipit esse est facere reprehenderit temporibus quas, voluptas aperiam sed tenetur nisi. Cum nisi labore sunt accusantium deserunt. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Similique repudiandae neque amet quibusdam, blanditiis accusamus fugit, deleniti numquam praesentium magni magnam saepe doloribus error ea distinctio quidem fuga, placeat optio? Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Dolor quidem ratione aspernatur cum excepturi rem? Excepturi hic rerum voluptate aliquam quam neque officia, nulla dicta maiores ipsa blanditiis minima voluptates?
+                </p>
+
+            </div>
+        </main>
+    </div>
+
+    <div class="category h-100">
+        <form id="search-form">
+            <div class="search-container d-flex m-auto pl-3">
+                <div id="tags-container" class="d-flex">
+                </div>
+
+                <input type="text" name="search" id="search">
+
+                <button type="reset" class="btn btn-warning bmd-btn-icon">
+                    <i class="fas fa-times material-icons"></i>
+                </button>
+            </div>
+        </form>
+        <div class="images-container w-75 m-auto">
+            <div class="house1"></div>
+            <div class="house5"></div>
+            <div class="house2"></div>
+            <div class="house5"></div>
+            <div class="house3"></div>
+            <div class="house4"></div>
+            <div class="house6"></div>
+            <div class="house4"></div>
+            <div class="house6"></div>
+            <div class="house3"></div>
+            <div class="house3"></div>
+            <div class="house4"></div>
+            <div class="house6"></div>
+            <div class="house4"></div>
+            <div class="house6"></div>
+            <div class="house3"></div>
         </div>
-    </main>
+    </div>
+
     <!-- Optional JavaScript -->
+    <script src="./scripts/app.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
