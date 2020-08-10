@@ -11,20 +11,45 @@ body {
 }
 
 nav {
+    a {
+        cursor: pointer;
+    }
     padding: 10px 10px 10px 2vw;
-    display: grid;
-    place-items: center;
-    grid-template-rows: 50px;
-    grid-template-columns: 1fr 700px 1fr;
+    #active-line {
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #E14A5B;
+    }
     .logo-container,
     .logo-container:hover {
+        position: relative;
         place-self: start;
         text-decoration: none;
         .logo {
             color: $pink;
             font-weight: bold;
-            border: 3px solid $pink;
         }
+    }
+    .logo-container::before {
+        content: "";
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid $pink;
+        border-width: 3px 0 0 3px;
+    }
+    .logo-container::after {
+        content: "";
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border: solid $pink;
+        border-width: 0 3px 3px 0;
     }
     .navbar-items {
         display: grid;
@@ -38,7 +63,7 @@ nav {
         }
         a:hover {
             text-decoration: none;
-            border-bottom: 2px solid $pink;
+            color: $pink;
         }
     }
     button {
@@ -51,16 +76,10 @@ nav {
 
 .home {
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: "text image" "text image" "text image";
         img {
-            grid-area: image;
             height: 44vw;
         }
         .main-text {
-            grid-area: text;
             display: grid;
             grid-template-rows: repeat(3, 1fr);
             h1 {
@@ -114,19 +133,12 @@ nav {
 }
 
 .what_is_this {
+    display: none;
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "text image";
         img {
-            grid-area: image;
             height: 44vw;
         }
         .main-text {
-            grid-area: text;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             padding-left: 9vw;
             padding-right: 70px;
             h1 {
@@ -146,6 +158,7 @@ nav {
 }
 
 .category {
+    display: none;
     form {
         .search-container {
             border: 3px solid $mid-gray;
@@ -182,12 +195,10 @@ nav {
     }
     .images-container {
         height: 80vh;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: min($numbers: 300px);
-        grid-gap: 10px;
         div {
             background-size: cover;
+            background-position: center;
+            height: 18vw;
         }
         .house1 {
             background-image: url(../media/house1.jpg);
@@ -206,6 +217,69 @@ nav {
         }
         .house6 {
             background-image: url(../media/house6.jpg);
+        }
+    }
+}
+
+.about_us {
+    display: none;
+    .contributors {
+        .card {
+            box-shadow: none;
+            .image {
+                width: 105px;
+                height: 105px;
+                background-size: cover;
+            }
+            .cont1 {
+                background-image: url('../media/cont-1.jpg');
+                background-position: center top;
+            }
+            .cont2 {
+                background-image: url('../media/cont-2.jpg');
+                background-position: center top;
+            }
+            .cont3 {
+                background-image: url('../media/cont-3.jpg');
+                background-position: center bottom;
+            }
+            .cont4 {
+                background-image: url('../media/cont-4.jpg');
+                background-position: center top;
+            }
+            .name {
+                font-family: Rhodium Libre;
+                font-size: 18px;
+            }
+            .details {
+                font-family: Rhodium Libre;
+                font-size: 18px;
+                line-height: 31px;
+                color: #9D9D9D;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .home {
+        main {
+            .main-text {
+                display: grid;
+                grid-template-rows: repeat(3, 1fr);
+                h1 {
+                    font-weight: bolder;
+                    font-size: 7vw;
+                    place-self: end center;
+                    color: black;
+                }
+                p {
+                    font-size: 2vw;
+                    color: $dark-gray;
+                    font-family: 'Rhodium Libre', serif;
+                    place-self: center;
+                }
+            }
         }
     }
 }

@@ -25,51 +25,58 @@
 </head>
 
 <body>
-    <nav>
-        <a class="logo-container" href="">
+    <nav class="d-flex position-relative">
+        <hr id="active-line" class="m-0 position-absolute">
+        <a class="logo-container mt-2 ml-md-5">
             <div class="logo py-1 px-2">
                 Homer
             </div>
         </a>
 
-        <div class="navbar-items w-100 h-100">
-            <a href="">HOME</a>
-            <a href="">WHAT IS THIS?</a>
-            <a href="">CATEGORY</a>
-            <a href="">ABOUT</a>
+        <div class="navbar-items mt-3 w-100 h-100">
+            <a id="home">HOME</a>
+            <a id="what_is_this">WHAT IS THIS?</a>
+            <a id="category">CATEGORY</a>
+            <a id="about_us">ABOUT US</a>
         </div>
 
-        <button type="button" class="btn py-2 px-5">sign in</button>
+        <button type="button" class="btn mt-3 mr-3 py-2 px-5 d-none d-md-block">sign in</button>
     </nav>
 
-    <div class="home" hidden>
-        <main>
-            <img src="./media/home.svg" alt="home vector art">
+    <div class="home active">
+        <main class="d-flex justify-content-center">
             <div class="main-text">
                 <h1>Feel the satisfaction, <br>find our new home now</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br> Natus consequatur hic amet sapiente obcaecati nostrum consectetur</p>
-                <form>
+                <form class="pl-5 pl-sm-auto">
                     <label> Looking for:</label>
                     <input type="number" name="price" placeholder="Price">
                     <input type="number" name="rooms" placeholder="rooms">
-                    <button type="button" class="btn btn-raised btn-primary">Search</button>
+                    <button type="button" class="btn btn-raised btn-primary my-2">Search</button>
                 </form>
             </div>
+            <img src="./media/home.svg" alt="home vector art" class="d-none d-xl-block">
         </main>
     </div>
 
-    <div class="what_is_this" hidden>
-        <main>
-            <img src="./media/question.svg" alt="question vector art">
-            <div class="main-text">
-                <h1>What is this??</h1>
+    <div class="what_is_this">
+        <main class="d-flex justify-content-center">
+            <div class="row">
+                <div class="col-xl d-flex align-items-center order-2 order-xl-1">
+                    <div class="main-text d-flex flex-column justify-content-center mt-5">
+                        <h1>What is this??</h1>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas debitis alias voluptatem dicta veritatis excepturi pariatur! Obcaecati nihil ad autem impedit vitae maiores esse numquam. Qui incidunt consectetur nobis autem! Lorem ipsum dolor
-                    sit, amet consectetur adipisicing elit. Officiis illum natus ea suscipit esse est facere reprehenderit temporibus quas, voluptas aperiam sed tenetur nisi. Cum nisi labore sunt accusantium deserunt. Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Similique repudiandae neque amet quibusdam, blanditiis accusamus fugit, deleniti numquam praesentium magni magnam saepe doloribus error ea distinctio quidem fuga, placeat optio? Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Dolor quidem ratione aspernatur cum excepturi rem? Excepturi hic rerum voluptate aliquam quam neque officia, nulla dicta maiores ipsa blanditiis minima voluptates?
-                </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas debitis alias voluptatem dicta veritatis excepturi pariatur! Obcaecati nihil ad autem impedit vitae maiores esse numquam. Qui incidunt consectetur nobis autem! Lorem
+                            ipsum dolor sit, amet consectetur adipisicing elit. Officiis illum natus ea suscipit esse est facere reprehenderit temporibus quas, voluptas aperiam sed tenetur nisi. Cum nisi labore sunt accusantium deserunt. Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Similique repudiandae neque amet quibusdam, blanditiis accusamus fugit, deleniti numquam praesentium magni magnam saepe doloribus error ea distinctio quidem fuga, placeat optio? Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Dolor quidem ratione aspernatur cum excepturi rem? Excepturi hic rerum voluptate aliquam quam neque officia, nulla dicta maiores ipsa blanditiis minima voluptates?
+                        </p>
 
+                    </div>
+                </div>
+                <div class="col-xl d-flex justify-content-center order-1 order-xl-2">
+                    <img src="./media/question.svg" alt="question vector art">
+                </div>
             </div>
         </main>
     </div>
@@ -78,9 +85,15 @@
         <form id="search-form">
             <div class="search-container d-flex m-auto pl-3">
                 <div id="tags-container" class="d-flex">
+                    <div class="tag my-1 mr-2 d-flex align-items-center">
+                        <span class="d-block text-truncate my-2 mx-2">mountain</span>
+                        <button class="btn btn-warning bmd-btn-icon mx-1" type="button">
+                            <i class="fas fa-times material-icons" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
 
-                <input type="text" name="search" id="search">
+                <input type="text" name="search" id="search" placeholder="add tag">
 
                 <button type="reset" class="btn btn-warning bmd-btn-icon">
                     <i class="fas fa-times material-icons"></i>
@@ -88,30 +101,61 @@
             </div>
         </form>
         <div class="images-container w-75 m-auto">
-            <div class="house1"></div>
-            <div class="house5"></div>
-            <div class="house2"></div>
-            <div class="house5"></div>
-            <div class="house3"></div>
-            <div class="house4"></div>
-            <div class="house6"></div>
-            <div class="house4"></div>
-            <div class="house6"></div>
-            <div class="house3"></div>
-            <div class="house3"></div>
-            <div class="house4"></div>
-            <div class="house6"></div>
-            <div class="house4"></div>
-            <div class="house6"></div>
-            <div class="house3"></div>
+            <div class="row mb-2">
+                <div class="col house1 mr-2"></div>
+                <div class="col house2 mr-2"></div>
+                <div class="col house3 mr-2"></div>
+            </div>
+            <div class="row mb-2">
+                <div class="col house4 mr-2"></div>
+                <div class="col house5 mr-2"></div>
+                <div class="col house6 mr-2"></div>
+            </div>
         </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <script src="./scripts/app.js"></script>
+    <div class="about_us h-100">
+        <div class="row">
+            <div class="col d-flex flex-column justify-content-around contributors mt-5">
+                <div class="row justify-content-around mt-5 ">
+                    <div class="col-4 card d-flex align-items-center">
+                        <div class="row image cont1 rounded-circle mb-3"></div>
+                        <div class="row name mb-3">David Kalm</div>
+                        <div class="row details mb-3">Lorem ipsum dolor sit amet, consectetur et de...</div>
+                    </div>
+
+                    <div class="col-4 card d-flex align-items-center">
+                        <div class="row image cont2 rounded-circle mb-3"></div>
+                        <div class="row name mb-3">Tomas Mark</div>
+                        <div class="row details mb-3">Lorem ipsum dolor sit amet, consectetur et de...</div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-around">
+                    <div class="col-4 card d-flex align-items-center">
+                        <div class="row image cont3 rounded-circle mb-3"></div>
+                        <div class="row name mb-3">M. Aya</div>
+                        <div class="row details mb-3">Lorem ipsum dolor sit amet, consectetur et de...</div>
+                    </div>
+
+                    <div class="col-4 card d-flex align-items-center">
+                        <div class="row image cont4 rounded-circle mb-3"></div>
+                        <div class="row name mb-3">Tarek Mohamed</div>
+                        <div class="row details mb-3">Lorem ipsum dolor sit amet, consectetur et de...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-none d-xl-flex align-items-center">
+                <img class="w-100" src="./media/about us.svg" alt="about us svg">
+            </div>
+        </div>
+    </div>
+
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>
@@ -119,6 +163,9 @@
             $('body').bootstrapMaterialDesign();
         });
     </script>
+
+    <!-- Optional JavaScript -->
+    <script src="./scripts/app.js"></script>
 </body>
 
 </html>
